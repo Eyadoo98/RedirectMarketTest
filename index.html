@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function redirectToStore() {
+            // User-Agent check for Android
+            if (/Android/i.test(navigator.userAgent)) {
+                window.location.href = 'https://play.google.com/store/search?q=cvume&c=apps&hl=en&gl=US';
+            }
+            // User-Agent check for iOS
+            else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                window.location.href = 'https://play.google.com/store/apps/details?id=ae.gov.iacad.PrayerTimings';
+            } else {
+                // Redirect to a default page if not Android or iOS
+                // window.location.href = 'https://www.example.com'; // Replace with your default URL
+                alert("you are not using a mobile device");
+            }
+        }
+    </script>
+</head>
+
+<body onload="redirectToStore()">
+    <p>Redirecting...</p>
+
+</body>
+
+</html>
